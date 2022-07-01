@@ -14,7 +14,7 @@ return [0, 1].
 
 
 ## Code
- ``````````````
+ ```
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
