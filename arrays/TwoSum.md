@@ -22,11 +22,51 @@ return [0, 1].
 
  const twoSum = (array, target) => {
     for ( let i = 0; i < array.length; i++) {
-         for ( let j= i++; i< array.length; j++) {
-              if ( array[j] === target - array[i]) return [i, j]               
+         for ( let j = i++; i< array.length; j++) {
+              if ( array[j] === target - array[i]) 
+              return [i, j]               
          };
     };
     return null;
 };
 
+```
 
+## This was accepted
+
+```
+
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+
+const twoSum = (nums, target) => {
+  const previousValues = {}
+  for (let i = 0; i < nums.length; i++) {
+    const currentValue = nums[i]
+    const neededValue = target - currentValue
+    if (previousValues[neededValue] != null) {
+      return [previousValues[neededValue], i]
+    } else {
+      previousValues[currentValue] = i
+    }
+  }
+
+	return []
+}
+```
+```
+const twoSum = (nums, target) => {
+    const prevValues = {}
+    for (let i = 0; i < nums.length; i++){
+        const currentNumber = nums[i]
+        const neededValue = target - currentNumber
+        const index2 = prevValues[neededValue]
+        if(index2 != null){
+            return [index2, i]
+        }else {
+            prevValues[currentNumber] = i
+        }
+    }
+    return null
+}
