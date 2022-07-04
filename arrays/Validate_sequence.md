@@ -7,6 +7,7 @@ Example:
 array: [3, 1, 7, 5, 10, 2];
 sequence: [1, 5, 2];
 Output: true
+
 ```
 # 1
 We can use a pointer to remember the position we are at in the sequence array. Iterate through the array. At each iteration, compare the current element in the array to the element that the pointer is pointing at. If they are equal to each other, then it means the element in the sequence does appear in the array, move the pointer forward by 1. If the pointer is equal to the length of the sequence array, then it means all the elements in the sequence array are found in the array and they are in the same order, return true. When we get out of the loop without returning the result, return false.
